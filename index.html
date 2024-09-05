@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+        }
+
+        .box1 {
+            background-color: blue;
+            padding: 10px 20px;
+            width: 330px;
+        }
+
+        .box2 {
+            background-color: orange;
+            border-radius: 0;
+            border:black solid;
+            width: 175px;
+            height: 100px;
+        }
+
+        .box3, .box4 {
+            background-color: red;
+            width: 150px;
+            height: 50px;
+        }
+
+        .box6 {
+            background-color: black;
+            width:175px;
+            height: 50px;
+            color: white;
+            border-radius:0;
+        }
+
+        .box5 {
+            background-color: red;
+            width: 150px;
+            height: 50px;
+        }
+
+        .change-shape {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- First row | Himalayan Tiger-->
+        <div class="row">
+            <div class="box box1">Himalayan Tiger</div>
+        </div>
+        
+        <!-- Second row | Tag Mahal-->
+        <div class="row">
+            <div class="box box2">Taj Mahal</div>
+
+            <!-- Column for "2" and "Locker" -->
+            <div class="column">
+                <div class="box box3">2</div>
+                <div class="box box4">Locker</div>
+            </div>
+        </div>
+        
+        <!-- Third row | 1 and 3 -->
+        <div class="row">
+            <div class="box box6">1</div>
+            <div class="box box5">3</div>
+        </div>
+
+        <!-- Button | Change Shape-->
+        <div class="row">
+            <button class="change-shape" >Change Shape</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="script.js"></script>
